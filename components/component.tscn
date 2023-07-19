@@ -8,8 +8,8 @@ size = Vector2(2.08165e-12, 2.08165e-12)
 
 [node name="Component" type="Area2D"]
 script = ExtResource("1_gl6nw")
-numerical_value = nan
-si_unit_prefix = 6
+numerical_value = -4.52514e-12
+si_unit_prefix = -6
 
 [node name="BoundingBox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_70sjb")
