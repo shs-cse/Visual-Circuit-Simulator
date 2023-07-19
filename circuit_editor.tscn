@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://do3rbboax0bgr"]
+
+[ext_resource type="Script" path="res://circuit_editor.gd" id="1_xekyc"]
+[ext_resource type="PackedScene" uid="uid://dahe2euiuqnao" path="res://components/component.tscn" id="2_5d2n5"]
+
+[node name="CircuitEditor" type="Node2D"]
+script = ExtResource("1_xekyc")
+
+[node name="AscFileSelectionDialog" type="FileDialog" parent="."]
+title = "Open a File"
+initial_position = 1
+size = Vector2i(1400, 800)
+ok_button_text = "Open"
+file_mode = 0
+access = 2
+root_subfolder = "/Users/shawon/Documents/LTspice"
+filters = PackedStringArray("*.asc ; LTspice Schematic File")
+
+[node name="Component" parent="." instance=ExtResource("2_5d2n5")]
+position = Vector2(118, 112)
+size = Vector2i(2, 3)
+numerical_value = 1205.0
+si_unit_prefix = -6
+
+[node name="Component2" parent="." instance=ExtResource("2_5d2n5")]
+position = Vector2(263, 181)
+numerical_value = nan
+
+[connection signal="file_selected" from="AscFileSelectionDialog" to="." method="_on_asc_file_selected"]
