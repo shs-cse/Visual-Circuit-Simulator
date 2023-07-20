@@ -8,7 +8,7 @@ enum TYPE {
 	CURRENT_SOURCE,
 }
 ## Width of a 1x1 tile in pixels
-const TILE_SIZE := 20
+const TILE_SIZE := 160
 ## Dictionary mapping from component type to their corresponding unit
 const unit_dict := {
 	TYPE.RESISTOR: SI.UNIT.OHM,

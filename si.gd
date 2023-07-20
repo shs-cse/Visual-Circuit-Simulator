@@ -58,7 +58,6 @@ func _to_string():
 		UNIT_REPR_DICT[self.unit]
 	]
 	
-
 func update_value():
 	self.value = self.number * 10.0 ** self.prefix
 	print_rich(
